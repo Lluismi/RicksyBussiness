@@ -20,8 +20,14 @@ public class CreditCard {
 		return this.credit;
 	}
 	
-	public boolean pay(double credit) {
-		return true;
+	public boolean pay(double creditapagar) {
+		if (credit() != 0) {
+			this.credit -= creditapagar;
+			return true;
+		}else {
+			System.out.println("Eres un pringado y no tienes un duro");
+		}
+		return false;
 	}
 	
 	@Override
