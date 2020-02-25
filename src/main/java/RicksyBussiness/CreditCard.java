@@ -24,9 +24,7 @@ public class CreditCard {
 		if (credit() != 0) {
 			this.credit -= creditapagar;
 			return true;
-		}else {
-			System.out.println("Eres un pringado y no tienes un duro");
-		}
+		}else {}
 		return false;
 	}
 	
