@@ -6,8 +6,7 @@ import static org.junit.Assert.*;
 
 public class UfosParkTest {
 
-    UfosPark ufos = null;
-    String[] ovnis = { "unx", "dox", "trex" };
+    UfosPark test;
 
     /**
      * Testea el metodo añadir ovni 
@@ -15,6 +14,13 @@ public class UfosParkTest {
      */
     @Test
     public void addUfoTest() {
+        UfosPark test = new UfosPark();
+        String[] IDovni = {"unx", "dox"};
+        
+        for (String ovni : IDovni) {
+        	test.add(ovni);
+        }
+        assertEquals(2, test.getFlota());
     }
     
     /**
