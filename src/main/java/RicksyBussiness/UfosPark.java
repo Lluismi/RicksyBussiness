@@ -19,12 +19,10 @@ public class UfosPark {
 	/* Error abradolph paga 2 ovnis pero solo tiene 1*/
 	public void dispatch(CreditCard abradolph) {
 		for (String ovni : flota.keySet()) {
-			if(flota.get(ovni) != null) {
+			if(flota.get(ovni) == ovni) {
 				abradolph.pay(fee);
 					flota.put(ovni, abradolph.number());
 					break;
-			}else if(flota.get(ovni) == abradolph.number()) {
-				break;
 			}
 		}
 	}
