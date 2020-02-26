@@ -1,6 +1,6 @@
 package RicksyBussiness;
 
-public class CrystalExpender {
+public class CrystalExpender implements GuestDispatcher {
 	
 	private int stock = 3;
 	private double itemCost = 50;
