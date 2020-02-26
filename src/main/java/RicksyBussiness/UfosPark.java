@@ -7,27 +7,35 @@ import java.util.Map;
 
 public class UfosPark {
 	
-	private double fee = 500;
+	private double fee = 500; 
 	private Map<String, String> flota = new HashMap<String, String>();
 	
 	public UfosPark() {}
-
+	
+	/* Añade una key "ovni" con valor "null" */
+	
 	public void add(String ovni) {
-		flota.put(ovni, ovni);
+		flota.put(ovni, null);
 	}
 	
-	/* Error abradolph paga 2 ovnis pero solo tiene 1*/
-	public void dispatch(CreditCard abradolph) {
+	/* Recorre el HashMap, si ovni es igual a "null" llama al metodo pay, 
+	 * si tiene dinero paga y se le asigna el ovni, 
+	 * comprueba si esa persona ya tiene un ovni */
+	
+	public void dispatch(CreditCard persona) {
 		for (String ovni : flota.keySet()) {
-			if(flota.get(ovni) == ovni) {
-				abradolph.pay(fee);
-					flota.put(ovni, abradolph.number());
-					break;
+			if(flota.get(ovni) == null) {
+				if (persona.pay(fee)) {
+					flota.put(ovni, persona.number());
+				}
+			} if (flota.get(ovni) == persona.number());{
+				break;
 			}
 		}
 	}
 	
-	/* Error le da el mismo ovni a todos  y morty le cobra aunque no haya ovni para el*/
+	/* Devuelve ovni asignado a "persona" */
+	
 	public String getUfoOf(String number) {
 		String NameOvni = null;
 		for (String ovni : flota.keySet()) {
@@ -38,7 +46,8 @@ public class UfosPark {
 		return NameOvni;
 	}
 	
-	/* Error: Saca la lista de arriba abajo en vez de como pide la foto*/
+	/* Un toString con una lista de ovnis de los key del HashMap */
+	
 	public String toString() {
 		List<String> ovnis = new ArrayList<String>(flota.keySet());
 		return ovnis.toString();
