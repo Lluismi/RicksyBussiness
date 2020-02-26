@@ -30,7 +30,7 @@ public class UfosPark implements GuestDispatcher {
 				if (persona.pay(fee)) {
 					flota.put(ovni, persona.number());
 				}
-			} if (flota.get(ovni) == persona.number());{
+			} if (flota.get(ovni) == persona.number()) {
 				break;
 			}
 		}
