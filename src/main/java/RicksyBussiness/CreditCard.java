@@ -21,10 +21,10 @@ public class CreditCard {
 	}
 	
 	public boolean pay(double creditapagar) {
-		if (credit() != 0) {
+		if (credit() - creditapagar != credit) {
 			this.credit -= creditapagar;
 			return true;
-		}else {}
+		}
 		return false;
 	}
 	
