@@ -10,6 +10,8 @@ public class UfosPark {
 	private double fee = 500; 
 	private Map<String, String> flota = new HashMap<String, String>();
 	
+	/* Constructor */
+	
 	public UfosPark() {}
 	
 	/* Añade una key "ovni" con valor "null" */
@@ -46,8 +48,7 @@ public class UfosPark {
 		return NameOvni;
 	}
 	
-	/* Un toString con una lista de ovnis de los key del HashMap */
-	
+	@Override
 	public String toString() {
 		List<String> ovnis = new ArrayList<String>(flota.keySet());
 		return ovnis.toString();
