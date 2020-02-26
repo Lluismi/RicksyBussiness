@@ -1,1 +1,1 @@
-# RikcsyBussiness
+# RicksyBussiness
