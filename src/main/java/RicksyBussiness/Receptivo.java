@@ -10,6 +10,12 @@ public class Receptivo {
 	/* Constructor */
 	
 	public Receptivo() {}
+
+	public void registra(GuestDispatcher GuestDispatcher) {
+		
+	}
 	
-	
+	public void dispatch(CreditCard persona) {
+		
+	}
 }
