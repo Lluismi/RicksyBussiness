@@ -7,7 +7,7 @@ public class CrystalExpender implements GuestDispatcher {
 	
 	/* Constructor */
 	
-	public CrystalExpender(int stock, double itemCost) {
+	CrystalExpender(int stock, double itemCost) {
 		this.stock = stock;
 		this.itemCost = itemCost;
 	}
@@ -22,7 +22,7 @@ public class CrystalExpender implements GuestDispatcher {
 		}
 	}
 	
-	public int stock() {
+	int stock() {
 		return stock;
 		
 	}
@@ -32,4 +32,5 @@ public class CrystalExpender implements GuestDispatcher {
 		return "Stock: " + stock + "\n" +
 				"cost: " + itemCost;
 	}
+	
 }

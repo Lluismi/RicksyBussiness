@@ -12,11 +12,11 @@ public class UfosPark implements GuestDispatcher {
 	
 	/* Constructor */
 	
-	public UfosPark() {}
+	UfosPark() {}
 	
 	/* Añade una key "ovni" con valor "null" */
 	
-	public void add(String ovni) {
+	void add(String ovni) {
 		flota.put(ovni, null);
 	}
 	
@@ -38,7 +38,7 @@ public class UfosPark implements GuestDispatcher {
 	
 	/* Devuelve ovni asignado a "persona" */
 	
-	public String getUfoOf(String number) {
+	String getUfoOf(String number) {
 		String NameOvni = null;
 		for (String ovni : flota.keySet()) {
 			if (flota.get(ovni) == number) {
@@ -53,4 +53,5 @@ public class UfosPark implements GuestDispatcher {
 		List<String> ovnis = new ArrayList<String>(flota.keySet());
 		return ovnis.toString();
 	}
+	
 }

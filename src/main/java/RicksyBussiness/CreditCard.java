@@ -9,19 +9,18 @@ public class CreditCard {
 	
 	/* Constructor */
 	
-	public CreditCard(String owner, String number) {
+	CreditCard(String owner, String number) {
 		this.owner = owner;
 		this.number = number;
 	}
 	
 	/* getters */
 	
-	public String number() {
+	String number() {
 		return this.number;
 	}
 	
-	
-	public double credit() {
+	double credit() {
 		return this.credit;
 	}
 	
@@ -29,7 +28,7 @@ public class CreditCard {
 	 * si tiene devuelve true
 	 * si no tiene devuelve false */
 	
-	public boolean pay(double creditapagar) {
+	boolean pay(double creditapagar) {
 		if (credit() != 0) {
 			this.credit -= creditapagar;
 			return true;
