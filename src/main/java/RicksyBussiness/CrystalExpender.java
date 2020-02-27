@@ -18,12 +18,12 @@ public class CrystalExpender implements GuestDispatcher {
 	
 	public void dispatch(CreditCard persona) {
 		if (persona.pay(itemCost) && stock > 0) {
-			stock -= 1;
+			this.stock -= 1;
 		}
 	}
 	
 	int stock() {
-		return stock;
+		return this.stock;
 		
 	}
 
