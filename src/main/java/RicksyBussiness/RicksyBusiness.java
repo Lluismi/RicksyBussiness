@@ -23,6 +23,8 @@
  * en la tarjeta del invitado/a el coste de ambos servicios. 
  */
 
+/* Clase heredada del tutor */
+
 package RicksyBussiness;
 
 public class RicksyBusiness {
@@ -206,26 +208,27 @@ public class RicksyBusiness {
         mostrarReserva(morty, packExpender, ufosPark);
         
 
-//        /**
-//         * A por el 10!! 
-//         * Wubba lubba dub dub!!
-//         * 
-//         * Añade otra tarea al receptivo,
-//         * de modo que 5 invitados:
-//         * abradolph, squanchy, morty, gearHead, birdpearson
-//         * encarguen un RickMenú junto 
-//         * al ovni y al pack de bienvenida.
-//         * Hay 100 RickMenús y su precio es de 10 EZIs.
-//         * Muestra el total de pedidos y la lista de
-//         * invitados/as que han hecho un pedido.
-//         */
-//
-//         // tu código aquí
-//    }
-//
-//    private static void mostrarReserva(CreditCard card, CrystalExpender expender, UfosPark ufos) {
-//        System.out.println(card);
-//        System.out.println("Packs: " + expender.stock());
-//        System.out.println("Ovni: " + ufos.getUfoOf(card.number()));
+        /**
+         * A por el 10!! 
+         * Wubba lubba dub dub!!
+         * 
+         * Añade otra tarea al receptivo,
+         * de modo que 5 invitados:
+         * abradolph, squanchy, morty, gearHead, birdpearson
+         * encarguen un RickMenú junto 
+         * al ovni y al pack de bienvenida.
+         * Hay 100 RickMenús y su precio es de 10 EZIs.
+         * Muestra el total de pedidos y la lista de
+         * invitados/as que han hecho un pedido.
+         */
+
+         // tu código aquí
+
+    }
+
+    private static void mostrarReserva(CreditCard card, CrystalExpender expender, UfosPark ufos) {
+        System.out.println(card);
+        System.out.println("Packs: " + expender.stock());
+        System.out.println("Ovni: " + ufos.getUfoOf(card.number()));
     }
 }
